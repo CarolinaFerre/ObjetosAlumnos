@@ -44,8 +44,7 @@ public class Alumno {
 
 	public static void main(String[] args) {
 		//Objeto alumno y declaración de variables
-		String nombre="";
-		int matricula=0;
+		
 		double nota1=7.5;
 		double nota2=6;
 		Alumno alumno = new Alumno(nombre,matricula);
@@ -56,9 +55,9 @@ public class Alumno {
 		//llamada al método dameMedia
 		System.out.println("La media registrada del alumno es= "+Alumno.dameMedia(nota1, nota2));
 		System.out.println("Introduce nombre del alumno");
-		nombre=sc.next();
+		Alumno.nombre=sc.next();
 		System.out.println("Introduce número de matrícula del alumno");
-		matricula=sc.nextInt();
+		Alumno.matricula=sc.nextInt();
 		System.out.println("***********REGISTRO FINAL DEL ALUMNO********");
 		
 		//llamada al método verAlumno
