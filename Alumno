@@ -1,0 +1,71 @@
+package metodosverano;
+	import java.util.Scanner;
+public class Alumno {
+	static Scanner sc=new Scanner(System.in);
+		static double medianotas;
+		static int contador;
+		static double notasalumno;
+		static double notasalumno2;
+		static String nombre;
+		static int matricula;
+		static double suma;
+
+
+	public Alumno(String nombre, int matricula) {
+		// constructor con atributos matricula, alumno
+	}
+	public static void ponNota(double nota1,double nota2) {
+		//método que muestra la nota del alumno
+		System.out.println("Las notas del alumno/a son="+nota1+" y "+nota2);
+	}
+	public static double dameMedia(double nota1,double nota2) {
+		//método que muestra la media del alumno
+		
+		if(((nota1>=0)&(nota1<=10))&((nota2>=0)&(nota2<=10))){
+			notasalumno=nota1;
+				contador++;
+			notasalumno2=nota2;
+				contador++;
+			suma=nota1+nota2;
+			medianotas=suma/contador;
+		}
+		return medianotas;
+		
+	}
+	public static void verAlumno(String nombre,int matricula,double nota1, double nota2,double medianotas) {
+		//método que muestra todos los datos del alumno
+		System.out.println("El nombre del alumno es= "+nombre);
+		System.out.println("La matrícula del alumno es= "+matricula);
+		System.out.println("Las notas del alumno son= "+nota1+" y "+nota2);
+		System.out.println("La nota media es= "+medianotas);
+	}
+
+	public static void main(String[] args) {
+		//Objeto alumno y declaración de variables
+		String nombre="";
+		int matricula=0;
+		double nota1=7.5;
+		double nota2=6;
+		Alumno alumno = new Alumno(nombre,matricula);
+		
+		//llamada al método ponNota
+		Alumno.ponNota(nota1,nota2);
+		
+		//llamada al método dameMedia
+		System.out.println("La media registrada del alumno es= "+Alumno.dameMedia(nota1, nota2));
+		System.out.println("Introduce nombre del alumno");
+		nombre=sc.next();
+		System.out.println("Introduce número de matrícula del alumno");
+		matricula=sc.nextInt();
+		System.out.println("***********REGISTRO FINAL DEL ALUMNO********");
+		
+		//llamada al método verAlumno
+		Alumno.verAlumno(nombre,matricula,nota1,nota2,medianotas);
+		
+		System.out.println("********FIN DE REGISTRO DEL ALUMNO*********");
+		
+		
+
+	}
+
+}
