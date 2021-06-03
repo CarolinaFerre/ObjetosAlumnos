@@ -16,11 +16,11 @@ public class Alumno {
 		this.nombre=nombre;
 		this.matricula=matricula;
 	}
-	public static void ponNota(double nota1,double nota2) {
+	public void ponNota(double nota1,double nota2) {
 		//método que muestra la nota del alumno
 		System.out.println("Las notas del alumno/a son="+nota1+" y "+nota2);
 	}
-	public static double dameMedia(double nota1,double nota2) {
+	public double dameMedia(double nota1,double nota2) {
 		//método que muestra la media del alumno
 		
 			notasalumno=nota1;
@@ -49,18 +49,18 @@ public class Alumno {
 		Alumno alumno = new Alumno(nombre,matricula);
 		
 		//llamada al método ponNota
-		Alumno.ponNota(nota1,nota2);
+		alumno.ponNota(nota1,nota2);
 		
 		//llamada al método dameMedia
-		System.out.println("La media registrada del alumno es= "+Alumno.dameMedia(nota1, nota2));
+		System.out.println("La media registrada del alumno es= "+alumno.dameMedia(nota1, nota2));
 		System.out.println("Introduce nombre del alumno");
-		Alumno.nombre=sc.next();
+		alumno.nombre=sc.next();
 		System.out.println("Introduce número de matrícula del alumno");
-		Alumno.matricula=sc.nextInt();
+		alumno.matricula=sc.nextInt();
 		System.out.println("***********REGISTRO FINAL DEL ALUMNO********");
 		
 		//llamada al método verAlumno
-		Alumno.verAlumno(nombre,matricula,nota1,nota2,medianotas);
+		alumno.verAlumno(nombre,matricula,nota1,nota2,medianotas);
 		
 		System.out.println("********FIN DE REGISTRO DEL ALUMNO*********");
 		
