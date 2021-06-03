@@ -13,6 +13,8 @@ public class Alumno {
 
 	public Alumno(String nombre, int matricula) {
 		// constructor con atributos matricula, alumno
+		this.nombre=nombre;
+		this.matricula=matricula;
 	}
 	public static void ponNota(double nota1,double nota2) {
 		//método que muestra la nota del alumno
