@@ -57,7 +57,7 @@ public class Alumno {
 		alumno.nombre=sc.next();
 		System.out.println("Introduce número de matrícula del alumno");
 		alumno.matricula=sc.nextInt();
-		System.out.println("***********REGISTRO FINAL DEL ALUMNO********");
+		System.out.println("***********REGISTRO FINAL DEL ALUMNO**********");
 		
 		//llamada al método verAlumno
 		alumno.verAlumno(nombre,matricula,nota1,nota2,medianotas);
